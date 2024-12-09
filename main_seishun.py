@@ -33,5 +33,13 @@ st.write('おすすめ映画アプリ')# タイトル
 # 書かせたい内容
 content_text_to_gpt = st.text_input("今日の気分を入力してください！")
 
-output_content_text = run_gpt(content_text_to_gpt)
-st.write(output_content_text)
+#output_content_text = run_gpt(content_text_to_gpt)
+#st.write(output_content_text)
+
+# ボタンがクリックされた場合のみ GPT を実行
+if st.button("おすすめの映画を教えて！"):
+    if content_text_to_gpt:
+        output_content_text = run_gpt(content_text_to_gpt)
+        st.write(output_content_text)
+    else:
+        st.write("気分を入力してください！")
