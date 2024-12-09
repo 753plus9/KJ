@@ -6,10 +6,10 @@ from openai import OpenAI # openAIのchatGPTのAIを活用するための機能�
 
 import os # OSが持つ環境変数OPENAI_API_KEYにAPIを入力するためにosにアクセスするためのライブラリをインポート
 # ここにご自身のAPIキーを入力してください！
-openai.api_key = st.secrets["OPENAI_API_KEY"]
+api_key = st.secrets["API_KEY"]
 
 # openAIの機能をclientに代入
-client = OpenAI()
+client = OpenAI(api_key=API_KEY)
 
 # chatGPTにリクエストするためのメソッドを設定。引数には書いてほしい内容と文章のテイストと最大文字数を指定
 def run_gpt(content_text_to_gpt):
