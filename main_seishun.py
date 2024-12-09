@@ -6,7 +6,8 @@ from openai import OpenAI # openAIのchatGPTのAIを活用するための機能�
 
 import os # OSが持つ環境変数OPENAI_API_KEYにAPIを入力するためにosにアクセスするためのライブラリをインポート
 # ここにご自身のAPIキーを入力してください！
-os.environ["OPENAI_API_KEY"] = "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"
+api_key = os.getenv("OPENAI_API_KEY")
+
 
 # openAIの機能をclientに代入
 client = OpenAI()
